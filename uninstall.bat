@@ -8,7 +8,7 @@ REM CPU_PERCENT: porcentaje (1-100). Default = 10
 set "CPU_PERCENT=10"
 REM -------------------------
 
-REM validar CPU_PERCENT: si no es número entre 1 y 100, usar 40
+REM validar CPU_PERCENT: si no es número entre 1 y 100, usar 10
 set "_nonnum="
 for /f "delims=0123456789" %%A in ("%CPU_PERCENT%") do set "_nonnum=%%A"
 if defined _nonnum (
@@ -58,4 +58,5 @@ powershell -NoProfile -Command "if(Test-Path 'log.txt'){Get-Content -Path 'log.t
 echo.
 pause
 exit /b %RC%
+
 
